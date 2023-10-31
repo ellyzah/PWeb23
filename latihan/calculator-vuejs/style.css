@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Spartan:wght@400;600&display=swap");
+@import url("https://use.typekit.net/eia7dfc.css");
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Spartan', sans-serif; */
+
+:root {
+	--white: #fff;
+	--black: #000;
+	--orange: #ffa600a9;
+	--body-color: rgba(255, 255, 255, 0.925);
+	--body-background: #151513;
+	--github-fill: var(--white);
+	--github-color: var(--body-background);
+	--github-focus: #ffa600;
+	--open-sans: "Open Sans", sans-serif;
+	--calculator-background: rgba(255, 255, 255, 0.15);
+	--shadow: 0 8px 32px 0 rgba(55, 55, 56, 0.37);
+	--button-hover: rgba(255, 255, 255, 0.25);
+	--calc-input: rgb(199, 197, 197);
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	position: absolute;
+	background: url("https://res.cloudinary.com/dn1e07eul/image/upload/v1614230187/100%20Days%20Of%20Code/coffeedesk_elkkzg.jpg")
+		no-repeat center center/cover;
+	width: 100%;
+	height: 100vh;
+}
+
+body {
+	color: var(--body-color);
+	font-family: var(--open-sans);
+	font-weight: 400;
+	font-style: normal;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 28px;
+	text-align: center;
+	/* overriding user-agent-stylesheet margin of 8px so that github ribbon is flush with edges */
+	margin: 0;
+}
+
+.calculator {
+	width: 320px;
+	background-color: var(--calculator-background);
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: var(--shadow);
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 280px;
+}
+
+button {
+	background: none;
+	color: var(--body-color);
+	font-size: 28px;
+	font-family: var(--open-sans);
+	font-weight: 400;
+	font-style: normal;
+}
+.btn {
+	flex: 0 0 93px;
+	height: 63px;
+	border: 1px solid transparent;
+	line-height: 61px;
+	transform: all 0.8s;
+	border-radius: 3px;
+}
+
+.btn:hover {
+	background-color: var(--button-hover);
+	color: var(--white);
+	cursor: pointer;
+	transition: all 0.25s;
+}
+
+.btn:focus {
+	background-color: var(--orange);
+	outline: none;
+	border: none;
+}
+
+.btn:active {
+	background-color: var(--orange);
+	transform: translateY(5px);
+}
+
+.calc {
+	height: 60px;
+	list-style: 30px;
+	color: var(--calc-input);
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.value {
+	height: 70px;
+	list-style: 50px;
+	font-weight: 600;
+	color: var(--white);
+	font-size: 36px;
+	letter-spacing: 1px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.github-corner:focus .octo-arm,
+.github-corner:hover .octo-arm {
+	animation: octocat-wave 560ms ease-in-out;
+}
+
+.github-corner:focus svg path {
+	fill: var(--github-focus);
+}
+
+.github-corner:focus .octo-arm,
+.github-corner:focus .octo-body {
+	fill: var(--github-color);
+}
+
+@keyframes octocat-wave {
+	0%,
+	100% {
+		transform: rotate(0);
+	}
+
+	20%,
+	60% {
+		transform: rotate(-25deg);
+	}
+
+	40%,
+	80% {
+		transform: rotate(10deg);
+	}
+}
+
+@media (max-width: 500px) {
+	.github-corner:hover .octo-arm {
+		animation: none;
+	}
+
+	.github-corner .octo-arm {
+		animation: octocat-wave 560ms ease-in-out;
+	}
+}
